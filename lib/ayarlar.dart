@@ -32,74 +32,54 @@ class ayarlarpage extends StatelessWidget {
                     style: TextStyle(fontSize: 24)),
               )),
         ),
-        InkWell(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                height: 45,
-                width: 110,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => anasayfa()),
-                    );
-                  },
-                  child: Text('ANASAYFA'),
-                ),
-              ),
-              Container(
-                height: 45,
-                width: 110,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => borsapage()),
-                    );
-                  },
-                  child: Text('BORSA VERİLERİ'),
-                ),
-              ),
-              Container(
-                height: 45,
-                width: 110,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => NotePage()),
-                    );
-                  },
-                  child: Text('AYARLAR'),
-                ),
-              ),
-              Container(
-                height: 45,
-                width: 110,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => graphpage()),
-                    );
-                  },
-                  child: Text('GIRAFİK'),
-                ),
-              ),
-            ],
-          ),
-        )
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            MyNavigatorContainer(
+              sayfaAdi: "ANASAYFA",
+              yonlendir: anasayfa(),
+            ),
+            MyNavigatorContainer(
+              sayfaAdi: "GRAFİK",
+              yonlendir: graphpage(),
+            ),
+            MyNavigatorContainer(
+              sayfaAdi: "BORSA",
+              yonlendir: borsapage(),
+            ),
+            MyNavigatorContainer(
+              sayfaAdi: "NOTLAR",
+              yonlendir: NotePage(),
+            ),
+          ],
+        ),
       ]),
+    );
+  }
+}
+class MyNavigatorContainer extends StatelessWidget {
+
+  final String sayfaAdi;
+  final Widget yonlendir;
+
+  MyNavigatorContainer({this.sayfaAdi = '', required this.yonlendir,});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      width: 110,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20), color: Colors.amber),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => yonlendir),
+          );
+        },
+        child: Text('${sayfaAdi}'),
+      ),
     );
   }
 }

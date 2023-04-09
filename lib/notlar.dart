@@ -50,7 +50,8 @@ class _NotePageState extends State<NotePage> {
       itemCount: _not.length,
       itemBuilder: (context, index) {
         final note = _not[index];
-        return Dismissible(//surukleme sistemi
+        return Dismissible(
+          //surukleme sistemi
           key: Key(note.baslik),
           direction: DismissDirection.endToStart,
           onDismissed: (direction) {
@@ -103,80 +104,65 @@ class _NotePageState extends State<NotePage> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Notları silmek için notları kaydırın", style: TextStyle(fontSize: 14),),
+            child: Text(
+              "Notları silmek için notları kaydırın",
+              style: TextStyle(fontSize: 14),
+            ),
           ),
           SizedBox(height: 16),
           Expanded(child: _buildNoteList()),
-          InkWell(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  height: 45,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => anasayfa()),
-                      );
-                    },
-                    child: Text('ANASAYFA'),
-                  ),
-                ),
-                Container(
-                  height: 45,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => borsapage()),
-                      );
-                    },
-                    child: Text('BORSA VERİLERİ'),
-                  ),
-                ),
-                Container(
-                  height: 45,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ayarlarpage()),
-                      );
-                    },
-                    child: Text('AYARLAR'),
-                  ),
-                ),
-                Container(
-                  height: 45,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20), color: Colors.amber),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => graphpage()),
-                      );
-                    },
-                    child: Text('GIRAFİK'),
-                  ),
-                ),
-              ],
-            ),
-          )
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              MyNavigatorContainer(
+                sayfaAdi: "ANASAYFA",
+                yonlendir: anasayfa(),
+              ),
+              MyNavigatorContainer(
+                sayfaAdi: "das",
+                yonlendir: graphpage(),
+              ),
+              MyNavigatorContainer(
+                sayfaAdi: "Anasdasdasdasd",
+                yonlendir: borsapage(),
+              ),
+              MyNavigatorContainer(
+                sayfaAdi: "Anasdadfgdfdsd",
+                yonlendir: ayarlarpage(),
+              ),
+            ],
+          ),
         ],
       ),
     );
   }
 }
 
+class MyNavigatorContainer extends StatelessWidget {
+  final String sayfaAdi;
+  final Widget yonlendir;
+
+  MyNavigatorContainer({
+    this.sayfaAdi = '',
+    required this.yonlendir,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      width: 110,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20), color: Colors.amber),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => yonlendir),
+          );
+        },
+        child: Text('${sayfaAdi}'),
+      ),
+    );
+  }
+}
