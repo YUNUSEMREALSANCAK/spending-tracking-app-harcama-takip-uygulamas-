@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobilprogramlamauyg/anasayfa.dart';
-import 'package:pie_chart/pie_chart.dart';
+import 'package:mobilprogramlamauyg/pages/anasayfa.dart';
 
 void main() {
   runApp(const MyApp());

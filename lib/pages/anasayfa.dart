@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mobilprogramlamauyg/ayarlar.dart';
-import 'package:mobilprogramlamauyg/borsa.dart';
-import 'package:mobilprogramlamauyg/graph.dart';
-import 'package:mobilprogramlamauyg/notlar.dart';
-
+import 'package:mobilprogramlamauyg/pages/ayarlar.dart';
+import 'package:mobilprogramlamauyg/pages/borsa.dart';
+import 'package:mobilprogramlamauyg/pages/graph.dart';
+import 'package:mobilprogramlamauyg/pages/notlar.dart';
+import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
+import 'package:mobilprogramlamauyg/variable/anasayfa_variable.dart';
 class anasayfa extends StatefulWidget {
   const anasayfa({Key? key}) : super(key: key);
 
@@ -186,15 +187,15 @@ class _anasayfaState extends State<anasayfa> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               MyNavigatorContainer(
-                sayfaAdi: "GRAFİK",
-                yonlendir: anasayfa(),
+                sayfaAdi: "NOTLAR",
+                yonlendir: NotePage(),
               ),
               MyNavigatorContainer(
-                sayfaAdi: "BORSA",
+                sayfaAdi: "GRAFİK",
                 yonlendir: graphpage(),
               ),
               MyNavigatorContainer(
-                sayfaAdi: "NOTLAR",
+                sayfaAdi: "BORSA",
                 yonlendir: borsapage(),
               ),
               MyNavigatorContainer(
@@ -214,32 +215,6 @@ class _anasayfaState extends State<anasayfa> {
           onPressed: _gidereklemesayfasi,
           child: Icon(Icons.add),
         ),
-      ),
-    );
-  }
-}
-class MyNavigatorContainer extends StatelessWidget {
-
-  final String sayfaAdi;
-  final Widget yonlendir;
-
-  MyNavigatorContainer({this.sayfaAdi = '', required this.yonlendir,});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 45,
-      width: 110,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.amber),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => yonlendir),
-          );
-        },
-        child: Text('${sayfaAdi}'),
       ),
     );
   }

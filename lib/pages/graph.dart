@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mobilprogramlamauyg/anasayfa.dart';
-import 'package:mobilprogramlamauyg/ayarlar.dart';
-import 'package:mobilprogramlamauyg/borsa.dart';
-import 'package:mobilprogramlamauyg/notlar.dart';
+import 'package:mobilprogramlamauyg/pages/anasayfa.dart';
+import 'package:mobilprogramlamauyg/pages/ayarlar.dart';
+import 'package:mobilprogramlamauyg/pages/borsa.dart';
+import 'package:mobilprogramlamauyg/pages/notlar.dart';
 import 'package:pie_chart/pie_chart.dart';
-
+import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
+import 'package:mobilprogramlamauyg/functions/graph_sil.dart';
 class graphpage extends StatefulWidget {
   const graphpage({Key? key}) : super(key: key);
 
@@ -15,26 +16,17 @@ class graphpage extends StatefulWidget {
 class _graphpageState extends State<graphpage> {
   Map<String, double> dataMap = {};
 
-  TextEditingController nameKontrol = TextEditingController();
+  TextEditingController _nameKontrol = TextEditingController();
   TextEditingController _degerKontrol = TextEditingController();
 
   void _mapeEkle() {
-    String key = nameKontrol.text;
-    double value = double.tryParse(_degerKontrol.text) ?? 0.0;
-
-    if (key.isNotEmpty) {
-      setState(() {
-        dataMap[key] = value;
-      });
-      nameKontrol.clear();
-      _degerKontrol.clear();
-    }
+    MapFonksiyonlari.mapeEkle(dataMap, _nameKontrol, _degerKontrol);
+    setState(() {});
   }
 
   void _maptenSil(String key) {
-    setState(() {
-      dataMap.remove(key);
-    });
+    MapFonksiyonlari.maptenSil(dataMap, key);
+    setState(() {});
   }
 
   @override
@@ -51,7 +43,7 @@ class _graphpageState extends State<graphpage> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              controller: nameKontrol,
+              controller: _nameKontrol,
               decoration: InputDecoration(
                 hintText: 'GİDER İSMİ ',
               ),
@@ -148,32 +140,6 @@ class _graphpageState extends State<graphpage> {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-class MyNavigatorContainer extends StatelessWidget {
-
-  final String sayfaAdi;
-  final Widget yonlendir;
-
-  MyNavigatorContainer({this.sayfaAdi = '', required this.yonlendir,});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 45,
-      width: 110,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.amber),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => yonlendir),
-          );
-        },
-        child: Text('${sayfaAdi}'),
       ),
     );
   }

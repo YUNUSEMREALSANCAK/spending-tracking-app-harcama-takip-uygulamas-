@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mobilprogramlamauyg/anasayfa.dart';
-import 'package:mobilprogramlamauyg/ayarlar.dart';
-import 'package:mobilprogramlamauyg/borsa.dart';
-import 'package:mobilprogramlamauyg/graph.dart';
+import 'package:mobilprogramlamauyg/pages/anasayfa.dart';
+import 'package:mobilprogramlamauyg/pages/ayarlar.dart';
+import 'package:mobilprogramlamauyg/pages/borsa.dart';
+import 'package:mobilprogramlamauyg/pages/graph.dart';
+import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
 
 class Not {
   String baslik;
@@ -119,15 +120,15 @@ class _NotePageState extends State<NotePage> {
                 yonlendir: anasayfa(),
               ),
               MyNavigatorContainer(
-                sayfaAdi: "das",
+                sayfaAdi: "GRAFİK",
                 yonlendir: graphpage(),
               ),
               MyNavigatorContainer(
-                sayfaAdi: "Anasdasdasdasd",
+                sayfaAdi: "BORSA",
                 yonlendir: borsapage(),
               ),
               MyNavigatorContainer(
-                sayfaAdi: "Anasdadfgdfdsd",
+                sayfaAdi: "AYARLAR",
                 yonlendir: ayarlarpage(),
               ),
             ],
@@ -138,31 +139,3 @@ class _NotePageState extends State<NotePage> {
   }
 }
 
-class MyNavigatorContainer extends StatelessWidget {
-  final String sayfaAdi;
-  final Widget yonlendir;
-
-  MyNavigatorContainer({
-    this.sayfaAdi = '',
-    required this.yonlendir,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 45,
-      width: 110,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.amber),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => yonlendir),
-          );
-        },
-        child: Text('${sayfaAdi}'),
-      ),
-    );
-  }
-}
