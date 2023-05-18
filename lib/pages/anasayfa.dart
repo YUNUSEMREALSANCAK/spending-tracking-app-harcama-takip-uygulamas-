@@ -67,7 +67,7 @@ class _anasayfaState extends State<anasayfa> {
     );
   }
 
-  void _gidereklemesayfasi() {
+  void gidereklemesayfasi() {
     bool expenseAdded = false;
     showDialog(
       context: context,
@@ -212,7 +212,7 @@ class _anasayfaState extends State<anasayfa> {
           tooltip: 'GİDER EKLE',
           backgroundColor: Colors.amber,
           splashColor: Colors.blueGrey,
-          onPressed: _gidereklemesayfasi,
+          onPressed: gidereklemesayfasi,
           child: Icon(Icons.add),
         ),
       ),
