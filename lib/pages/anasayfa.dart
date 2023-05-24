@@ -5,6 +5,9 @@ import 'package:mobilprogramlamauyg/pages/graph.dart';
 import 'package:mobilprogramlamauyg/pages/notlar.dart';
 import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
 import 'package:mobilprogramlamauyg/variable/anasayfa_variable.dart';
+import '/mywidget/anasayfa_giderler_bas_widget.dart';
+import 'package:mobilprogramlamauyg/functions/anasayfaFunc/butceEkle.dart';
+import 'package:mobilprogramlamauyg/functions/anasayfaFunc/giderEkle.dart';
 class anasayfa extends StatefulWidget {
   const anasayfa({Key? key}) : super(key: key);
 
@@ -17,14 +20,6 @@ class _anasayfaState extends State<anasayfa> {
   String _gideradi = "";
   double _gidertutari = 0.0;
   List<Map<String, dynamic>> _giderler = [];
-
-  void butceeksiltme() {
-    double tempgider = 0.0;
-    for (int i = 0; i < _giderler.length; i++) {
-      tempgider += _giderler[i]["tutar"];
-    }
-    _gidertutari -= tempgider;
-  }
 
   void butceeklemesayfasi() {
     showDialog(
@@ -114,7 +109,6 @@ class _anasayfaState extends State<anasayfa> {
                   "isim": _gideradi,
                   "tutar": _gidertutari,
                 });
-                butceeksiltme();
                 expenseAdded = true;
                 Navigator.of(context).pop();
               },
@@ -127,24 +121,6 @@ class _anasayfaState extends State<anasayfa> {
         setState(() {});
       }
     });
-  }
-
-  Widget _giderleribas() {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: _giderler.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Card(
-            // shape: Border.all(style:),
-            color: Colors.amber,
-            child: ListTile(
-              title: Text(_giderler[index]["isim"]),
-              subtitle: Text("${_giderler[index]["tutar"]} TL"),
-            ),
-          );
-        },
-      ),
-    );
   }
 
   @override
@@ -182,7 +158,7 @@ class _anasayfaState extends State<anasayfa> {
               )
             ],
           ),
-          _giderleribas(),
+          Giderleri_bas(giderler:_giderler ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -219,3 +195,6 @@ class _anasayfaState extends State<anasayfa> {
     );
   }
 }
+
+
+
