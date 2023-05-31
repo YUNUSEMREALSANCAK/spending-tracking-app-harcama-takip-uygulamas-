@@ -15,7 +15,7 @@ class MyNavigatorContainer extends StatelessWidget {
       height: 45,
       width: 110,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.amber),
+          borderRadius: BorderRadius.circular(20), color: Color(0xFFFFE082),),
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(

@@ -81,7 +81,7 @@ class _NotePageState extends State<NotePage> {
       appBar: AppBar(
         title: Text('NOT SAYFASI'),
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.amber.shade200,
       body: Column(
         children: [
           TextField(

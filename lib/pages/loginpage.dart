@@ -2,25 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mobilprogramlamauyg/pages/anasayfa.dart';
 import 'package:mobilprogramlamauyg/pages/singinPage.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'BÜTÇE TAKİP ',
-      theme: ThemeData(
-         primarySwatch: Colors.amber,
-      ),
-      home: const LoginPage(),
-    );
-  }
-}
-
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -52,9 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                //  LOGO İLE BEYAZ KUTUCUK ARASI
                 SizedBox(height: 30),
-                // İÇERİDEKİ GİRİŞ YAPMA KUTUCUĞU
                 Container(
                   width: MediaQuery.of(context).size.width *
                       0.9, // Ekran genişliği
@@ -82,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                               primary: Color(0xFFFFE082),
+                              primary: Color(0xFFFFE082),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),
@@ -94,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                                 child: Text(
                                   "Giriş Yap",
                                   style: TextStyle(
-                                    color:Color(0xFF000000),
+                                    color: Colors.black,
                                     fontSize: 18,
                                   ),
                                 ),
@@ -113,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                               primary: Colors.white70,
+                              primary:Color(0xFFFFE082),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),
@@ -125,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                                 child: Text(
                                   "Kayıt Ol",
                                   style: TextStyle(
-                                    color:Color(0xFF000000),
+                                    color: Color(0xFF000000),
                                     fontSize: 18,
                                   ),
                                 ),
@@ -137,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       SizedBox(height: 40),
 
-                      //GİRİŞ YAP
+                      // GİRİŞ YAP
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: TextField(
@@ -148,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
                               borderSide: BorderSide(color: Colors.white),
                             ),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.amberAccent),
+                              borderSide: BorderSide(color: Colors.black),
                             ),
                           ),
                         ),
@@ -179,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      // ŞİFREMİ UNUTTUM
+                      //ŞİFREMİ UNUTTUM BÖLÜMÜ
                       Padding(
                         padding: EdgeInsets.fromLTRB(20, 10, 28, 20),
                         child: GestureDetector(
@@ -208,7 +187,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       SizedBox(height: 20),
 
-                      // GİRİŞ YAP BUTONU VE YÖNLENDİRMESİ
+                      //GİRİŞ YAP BUTONU VE YÖNLENDİRMESİ
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -230,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: Text(
                               "Giriş Yap",
                               style: TextStyle(
-                                color: Color(0xFF000000),
+                                color: Colors.black,
                                 fontSize: 19,
                               ),
                             ),
@@ -248,4 +227,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-

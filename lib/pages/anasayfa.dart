@@ -4,10 +4,7 @@ import 'package:mobilprogramlamauyg/pages/borsa.dart';
 import 'package:mobilprogramlamauyg/pages/graph.dart';
 import 'package:mobilprogramlamauyg/pages/notlar.dart';
 import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
-import 'package:mobilprogramlamauyg/variable/anasayfa_variable.dart';
 import '/mywidget/anasayfa_giderler_bas_widget.dart';
-import 'package:mobilprogramlamauyg/functions/anasayfaFunc/butceEkle.dart';
-import 'package:mobilprogramlamauyg/functions/anasayfaFunc/giderEkle.dart';
 class anasayfa extends StatefulWidget {
   const anasayfa({Key? key}) : super(key: key);
 
@@ -26,6 +23,7 @@ class _anasayfaState extends State<anasayfa> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Colors.white,
           title: Text("Bütçe Ekle"),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -68,6 +66,7 @@ class _anasayfaState extends State<anasayfa> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Colors.white,
           title: Text("Harcama Ekle"),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -127,33 +126,35 @@ class _anasayfaState extends State<anasayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor:  Colors.amber,
           title: Center(child: Text("GİDER TAKİP SAYFASI")
           )
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(0xFFFFE082),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Row(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Bütçe: $_butcetutari TL',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24.0,
-                ),
+          Container(
+            padding: EdgeInsets.all(30),
+            child: Text(
+              'Bütçe: $_butcetutari TL',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24.0,
               ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: FloatingActionButton(
                   tooltip: 'BÜTÇE EKLE',
-                  backgroundColor: Colors.amber,
+                  backgroundColor: Colors.amber.shade400,//white
                   splashColor: Colors.blueGrey,
                   onPressed: butceeklemesayfasi,
-                  child: Icon(Icons.add),
+                  child: Icon(Icons.add,color: Colors.white70,),
                 ),
               )
             ],
@@ -186,10 +187,10 @@ class _anasayfaState extends State<anasayfa> {
         padding: const EdgeInsets.only(left: 30,top: 30,right: 2,bottom: 60),
         child: FloatingActionButton(
           tooltip: 'GİDER EKLE',
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.amber.shade400,
           splashColor: Colors.blueGrey,
           onPressed: gidereklemesayfasi,
-          child: Icon(Icons.add),
+          child: Icon(Icons.add ,color:Colors.white70),
         ),
       ),
     );

@@ -25,7 +25,7 @@ class _borsapageState extends State<borsapage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        // backgroundColor: Colors.amber,
         title: Center(
           child: Text(
             "BORSA SAYFASI",

@@ -18,12 +18,13 @@ class ayarlarpage extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Colors.blueGrey,
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      backgroundColor: Colors.amber.shade200,
+      body: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+           children: [
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: Card(
-              color: Colors.amber,
+               color: Colors.amber.shade200,
               margin: EdgeInsets.all(30),
               child: Padding(
                 padding: const EdgeInsets.all(25.0),

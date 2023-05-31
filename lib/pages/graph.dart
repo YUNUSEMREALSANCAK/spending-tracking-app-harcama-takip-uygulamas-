@@ -33,11 +33,11 @@ class _graphpageState extends State<graphpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.amber,
+          // backgroundColor: Colors.amber,
           title: Center(child: Text("GRAFİK SAYFASI")
           )
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.amber.shade200,
       body: Column(
         children: <Widget>[
           Padding(
