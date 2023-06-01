@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "542776019762",
-    "project_id": "denemefirebase-e0128",
-    "storage_bucket": "denemefirebase-e0128.appspot.com"
+    "project_number": "895692739688",
+    "project_id": "mobilprog-7a60d",
+    "storage_bucket": "mobilprog-7a60d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:542776019762:android:3bb3b4c0f5d6ebfae6652b",
+        "mobilesdk_app_id": "1:895692739688:android:e52928bfc37cf568e8d7dd",
         "android_client_info": {
           "package_name": "com.example.mobilprogramlamauyg"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "542776019762-tuth6vc6iioefs2fc4g0oou19s5gk09q.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBC4hlB6wfB_LgWM-CdLIWKQByNVkjHJ9w"
+          "current_key": "AIzaSyAh0tP6HT7qOWA1-CMMgwo_YnNmO5j2WMQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "542776019762-tuth6vc6iioefs2fc4g0oou19s5gk09q.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -32,7 +32,7 @@ class _borsapageState extends State<borsapage> {
           ),
         ),
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.amber.shade200,
       body: Center(
           child: Container(
         child: Column(
