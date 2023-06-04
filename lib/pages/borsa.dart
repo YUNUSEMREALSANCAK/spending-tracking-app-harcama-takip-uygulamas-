@@ -147,8 +147,8 @@ class _borsapageState extends State<borsapage> {
                   yonlendir: NotePage(),
                 ),
                 MyNavigatorContainer(
-                  sayfaAdi: "BORSA",
-                  yonlendir: borsapage(),
+                  sayfaAdi: "GRAFİK",
+                  yonlendir: graphpage(),
                 ),
                 MyNavigatorContainer(
                   sayfaAdi: "AYARLAR",
