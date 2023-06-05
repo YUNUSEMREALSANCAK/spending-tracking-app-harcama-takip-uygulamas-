@@ -14,7 +14,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![](images/Ekran görüntüsü 2023-06-05 123429.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122221.png)
 
 Parasal yönetim günlük yaşamımızın önemli bir parçasıdır ve mali hedeflerimize ulaşmak için doğru
 adımlar atmamızı sağlar. Ancak, bütçenizi yönetmek ve harcamalarınızı kontrol altında tutmak her
