@@ -14,7 +14,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122221.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20123429.png)
 
 Parasal yönetim günlük yaşamımızın önemli bir parçasıdır ve mali hedeflerimize ulaşmak için doğru
 adımlar atmamızı sağlar. Ancak, bütçenizi yönetmek ve harcamalarınızı kontrol altında tutmak her
@@ -24,28 +24,28 @@ Mobil Bütçe Takip, sizin finansal başarıya ulaşmanızı kolaylaştırmak i�
 araçtır. Uygulamamızın kullanıcı dostu arayüzü ve zengin özellikleri sayesinde, harcamalarınızı
 daha iyi yönetebilir, tasarruf edebilir ve mali hedeflerinize odaklanabilirsiniz.
 
-![](images/Ekran görüntüsü 2023-06-05 122221.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122221.png)
 
 Uygulamamızın sunduğu temel özellikler arasında, giderlerinizi takip edebileceğiniz ayrı bir
 sayfa bulunmaktadır. Bu sayfada, harcamalarınızı kategorilere ayırabilir, her bir kategori için
 ayrı ayrı bütçe belirleyebilir ve gerçek harcamalarınızı bütçenizle karşılaştırabilirsiniz. Böylece,
 harcamalarınızı kontrol altında tutarak gereksiz masraflardan kaçınabilir ve para biriktirebilirsiniz.
 
-![](images/Ekran görüntüsü 2023-06-05 122344.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122344.png)
 
 Ayrıca, uygulamamızda giderlerinizi grafiksel olarak gösteren bir sayfa da bulunmaktadır. 
 Bu grafikler, harcamalarınızı daha iyi görselleştirmenizi sağlar ve bütçenizi daha iyi analiz etmenizi
 sağlar. Harcamalarınızı hangi alanlarda yaptığınızı net bir şekilde görebilir ve gelecekteki
 harcamalarınızı planlarken daha bilinçli kararlar alabilirsiniz.
 
-![](images/Ekran görüntüsü 2023-06-05 122412.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122412.png)
 
 Son olarak, uygulamamız size döviz ve borsa piyasalarını takip etme imkanı sunar.
 Bu sayede, anlık döviz kurlarını ve borsa endekslerini görebilir, piyasa hareketlerini
 izleyebilir ve finansal kararlarınızı daha iyi bilgiye dayandırabilirsiniz. Bu özellik,
 küresel finansal trendleri takip etmek isteyenler için büyük bir avantaj sağlar.
 
-![](images/Ekran görüntüsü 2023-06-05 122558.png)
+![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20122558.png)
 
 Mobil Bütçe Takip aynı zamanda küçük notlar almanızı sağlayan bir sayfaya da sahiptir. 
 Bu sayfada, önemli finansal bilgileri ve hatırlatıcıları not alabilir, bütçeyle ilgili önemli 
