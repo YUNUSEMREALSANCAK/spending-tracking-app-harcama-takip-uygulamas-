@@ -1,11 +1,16 @@
 import 'package:mobilprogramlamauyg/pages/graph.dart';
 import 'package:flutter/material.dart';
-
-
+import 'package:firebase_database/firebase_database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 class MapFonksiyonlari {
   static void mapeEkle(Map<String, double> dataMap, TextEditingController nameKontrol, TextEditingController degerKontrol) {
+
     String key = nameKontrol.text;
     double value = double.tryParse(degerKontrol.text) ?? 0.0;
+    // FirebaseFirestore firestore =FirebaseFirestore.instance;
+    // final CollectionReference giderlerCollection = FirebaseFirestore.instance.collection('TestCo11ection');
+    // giderlerCollection.add({'test'':$dataMap'});
 
     if (key.isNotEmpty) {
       dataMap[key] = value;

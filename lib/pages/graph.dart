@@ -5,7 +5,10 @@ import 'package:mobilprogramlamauyg/pages/borsa.dart';
 import 'package:mobilprogramlamauyg/pages/notlar.dart';
 import 'package:pie_chart/pie_chart.dart';
 import 'package:mobilprogramlamauyg/mywidget/bottom_navigator_witget.dart';
-import 'package:mobilprogramlamauyg/functions/graph_sil.dart';
+import 'package:mobilprogramlamauyg/functions/graphfunc/graph_sil.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class graphpage extends StatefulWidget {
   const graphpage({Key? key}) : super(key: key);
 
@@ -16,12 +19,17 @@ class graphpage extends StatefulWidget {
 class _graphpageState extends State<graphpage> {
   Map<String, double> dataMap = {};
 
+
+
   TextEditingController _nameKontrol = TextEditingController();
   TextEditingController _degerKontrol = TextEditingController();
 
   void _mapeEkle() {
     MapFonksiyonlari.mapeEkle(dataMap, _nameKontrol, _degerKontrol);
+
+
     setState(() {});
+
   }
 
   void _maptenSil(String key) {

@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "895692739688",
-    "project_id": "mobilprog-7a60d",
-    "storage_bucket": "mobilprog-7a60d.appspot.com"
+    "project_number": "890687616159",
+    "project_id": "mobilprogramlamauyg",
+    "storage_bucket": "mobilprogramlamauyg.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:895692739688:android:e52928bfc37cf568e8d7dd",
+        "mobilesdk_app_id": "1:890687616159:android:abbe5e88e2b748d5115eaa",
         "android_client_info": {
           "package_name": "com.example.mobilprogramlamauyg"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "890687616159-u1tci447sq46db8oh2ne2tr9gs7cikp1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAh0tP6HT7qOWA1-CMMgwo_YnNmO5j2WMQ"
+          "current_key": "AIzaSyDZmr6SZI_J_fs3np2veWk1E-sBNBUjObQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890687616159-u1tci447sq46db8oh2ne2tr9gs7cikp1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
