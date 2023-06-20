@@ -8,9 +8,7 @@ class MapFonksiyonlari {
 
     String key = nameKontrol.text;
     double value = double.tryParse(degerKontrol.text) ?? 0.0;
-    // FirebaseFirestore firestore =FirebaseFirestore.instance;
-    // final CollectionReference giderlerCollection = FirebaseFirestore.instance.collection('TestCo11ection');
-    // giderlerCollection.add({'test'':$dataMap'});
+
 
     if (key.isNotEmpty) {
       dataMap[key] = value;
@@ -18,6 +16,7 @@ class MapFonksiyonlari {
       degerKontrol.clear();
     }
   }
+
 
   static void maptenSil(Map<String, double> dataMap, String key) {
     dataMap.remove(key);

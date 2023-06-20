@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobilprogramlamauyg/pages/anasayfa.dart';
 import 'package:mobilprogramlamauyg/pages/loginpage.dart';
-import 'package:mobilprogramlamauyg/pages/singinPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'pages/firebase_options.dart';
 void main() async{

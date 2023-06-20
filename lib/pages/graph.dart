@@ -23,12 +23,16 @@ class _graphpageState extends State<graphpage> {
 
   TextEditingController _nameKontrol = TextEditingController();
   TextEditingController _degerKontrol = TextEditingController();
+  // giderlerService _giderlerservice = giderlerService();
+
 
   void _mapeEkle() {
     MapFonksiyonlari.mapeEkle(dataMap, _nameKontrol, _degerKontrol);
 
 
-    setState(() {});
+    setState(() {
+      // _giderlerservice.addgiderler(string, double);
+    });
 
   }
 
