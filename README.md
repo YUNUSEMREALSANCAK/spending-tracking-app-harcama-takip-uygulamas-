@@ -6,15 +6,9 @@
 
 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
 
-![](https://github.com/YUNUSEMREALSANCAK/3311456_213311014/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-06-05%20123429.png)
+
 
 Parasal yönetim günlük yaşamımızın önemli bir parçasıdır ve mali hedeflerimize ulaşmak için doğru
 adımlar atmamızı sağlar. Ancak, bütçenizi yönetmek ve harcamalarınızı kontrol altında tutmak her
