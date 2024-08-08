@@ -1,14 +1,5 @@
-# mobilprogramlamauyg
-
-
 
 ## Getting Started
-
-
-
-
-
-
 
 Parasal yönetim günlük yaşamımızın önemli bir parçasıdır ve mali hedeflerimize ulaşmak için doğru
 adımlar atmamızı sağlar. Ancak, bütçenizi yönetmek ve harcamalarınızı kontrol altında tutmak her
